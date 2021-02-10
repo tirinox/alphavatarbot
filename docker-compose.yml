@@ -1,0 +1,44 @@
+version: "3.3"
+services:
+  alphabot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    depends_on:
+      - redis
+    environment:
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
+      - REDIS_HOST=${REDIS_HOST}
+      - REDIS_PORT=${REDIS_PORT}
+    networks:
+      - redis-net
+    volumes:
+      - ./app:/app
+      - ./config.yaml:/config/config.yaml
+
+  redis:
+    image: "redis:alpine"
+    volumes:
+      - ./redis_data:/data
+    networks:
+      - redis-net
+    restart: always
+    ports:
+      - "${REDIS_PORT}:${REDIS_PORT}"
+    expose:
+      - "${REDIS_PORT}"
+    command:
+      - 'redis-server'
+      - '--save 900 1'
+      - '--save 300 10'
+      - '--save 60 10000'
+      - '--port ${REDIS_PORT}'
+      - '--requirepass ${REDIS_PASSWORD}'
+
+networks:
+  redis-net:
+
+volumes:
+  redis_data:
+  app:

@@ -1,0 +1,15 @@
+# rename it to "config.yaml"
+
+log_level: INFO
+
+
+telegram:
+  bot:
+    token: FILL_ME_PLEASE
+
+
+avatar:
+  position:
+    x: 50  # percent 0-100
+    y: 83  # percent 0 (top) .. 100 (bottom)
+  scale: 25  # percent of max dimension

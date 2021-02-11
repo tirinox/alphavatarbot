@@ -45,11 +45,3 @@ def async_wrap(func):
         return await loop.run_in_executor(executor, pfunc)
 
     return run
-
-
-def img_to_bio(image, name):
-    bio = BytesIO()
-    bio.name = name
-    image.save(bio, 'PNG')
-    bio.seek(0)
-    return bio

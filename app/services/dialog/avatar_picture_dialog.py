@@ -30,7 +30,7 @@ async def get_userpic(user: User) -> Image.Image:
 
 
 ALPHA_AVA_LOGO_PATH = './data/alpha-logo.png'
-ALPHA_FULL_BG_PATH = './data/alpha-avatar-v2.png'
+ALPHA_FULL_BG_PATH = './data/alpha-avatar-v3.png'
 
 
 def image_square_crop(im):

@@ -7,10 +7,10 @@ from aiogram.types import Message, PhotoSize, ReplyKeyboardRemove, ContentTypes
 from aiogram.utils.helper import HelperMode
 
 from localization import BaseLocalization
-from services.dialog.avatar_image_work import download_tg_photo, get_userpic, combine_frame_and_photo_v2, img_to_bio
-from services.dialog.base import BaseDialog, message_handler
-from services.lib.depcont import DepContainer
-from services.lib.texts import kbd
+from dialog import download_tg_photo, get_userpic, combine_frame_and_photo_v2, img_to_bio
+from dialog import BaseDialog, message_handler
+from lib.depcont import DepContainer
+from lib.texts import kbd
 
 
 class AvatarStates(StatesGroup):

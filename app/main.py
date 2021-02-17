@@ -6,10 +6,10 @@ from aiogram import Bot, Dispatcher, executor
 from aiogram.types import *
 
 from localization import LocalizationManager
-from services.dialog import init_dialogs
-from services.lib.config import Config
-from services.lib.db import DB
-from services.lib.depcont import DepContainer
+from dialog import init_dialogs
+from lib.config import Config
+from lib.db import DB
+from lib.depcont import DepContainer
 
 
 class App:

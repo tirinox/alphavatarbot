@@ -1,8 +1,8 @@
 from aiogram import filters
 from aiogram.types import *
 
-from services.dialog.avatar_picture_dialog import AvatarDialog
-from services.dialog.base import BaseDialog, message_handler
+from dialog.avatar_picture_dialog import AvatarDialog
+from dialog import BaseDialog, message_handler
 
 
 class MainMenuDialog(BaseDialog):

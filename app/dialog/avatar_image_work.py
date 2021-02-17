@@ -3,8 +3,8 @@ from io import BytesIO
 from PIL import Image
 from aiogram.types import PhotoSize, User
 
-from services.lib.config import Config
-from services.lib.utils import async_wrap
+from lib.config import Config
+from lib.utils import async_wrap
 
 
 def img_to_bio(image, name):

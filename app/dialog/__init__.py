@@ -1,8 +1,8 @@
 from aiogram.types import ContentTypes, Message
 
-from services.dialog.avatar_picture_dialog import AvatarDialog
-from services.dialog.main_menu import MainMenuDialog
-from services.lib.depcont import DepContainer
+from dialog.avatar_picture_dialog import AvatarDialog
+from dialog import MainMenuDialog
+from lib.depcont import DepContainer
 
 
 async def sticker_handler(message: Message):

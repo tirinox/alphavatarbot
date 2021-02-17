@@ -1,7 +1,7 @@
-from services.lib.db import DB
+from lib.db import DB
 from localization.base import BaseLocalization
 from localization.eng import EnglishLocalization
-from services.lib.utils import Singleton
+from lib.utils import Singleton
 
 
 class LocalizationManager(metaclass=Singleton):

@@ -8,8 +8,8 @@ from aiogram.dispatcher.storage import FSMContextProxy, FSMContext
 from aiogram.types import Message, CallbackQuery
 
 from localization import BaseLocalization
-from services.lib.depcont import DepContainer
-from services.lib.texts import code
+from lib.depcont import DepContainer
+from lib.texts import code
 
 logger = logging.getLogger('DIALOGS')
 

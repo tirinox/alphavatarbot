@@ -9,8 +9,7 @@ class INotified(ABC):
     @abstractmethod
     async def on_data(self, sender, data): ...
 
-    async def on_error(self, sender, e):
-        ...
+    async def on_error(self, sender, e): ...
 
 
 class BaseFetcher(ABC):

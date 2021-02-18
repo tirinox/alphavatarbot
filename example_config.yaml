@@ -19,7 +19,7 @@ data_source:
     fetch_period: 1h
 
   coin_gecko:
-    fetch_perido: 60
+    fetch_period: 60
 
 
 notifications:

@@ -18,3 +18,7 @@ class DepContainer:
     dp: typing.Optional['Dispatcher'] = None
     broadcaster: typing.Optional['Broadcaster'] = None
     loc_man: typing.Optional['LocalizationManager'] = None
+
+    def __repr__(self) -> str:
+        return 'DepContainer()'
+

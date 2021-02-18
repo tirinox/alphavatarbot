@@ -5,7 +5,7 @@ import aiohttp
 from aiogram import Bot, Dispatcher, executor
 from aiogram.types import *
 
-from jobs.defipulse_job import DefiPulseFetcher
+from jobs.defipulse_job import DefiPulseFetcher, DefiPulsePersistance
 from lib.broadcast import Broadcaster
 from localization import LocalizationManager
 from dialog import init_dialogs
@@ -48,6 +48,9 @@ class App:
 
     async def _run_background_jobs(self):
         fetcher_defipulse = DefiPulseFetcher(self.deps)
+
+        defipulse_saver = DefiPulsePersistance(self.deps)
+        fetcher_defipulse.subscribe(defipulse_saver)
         await asyncio.gather(*(task.run() for task in [
             fetcher_defipulse
         ]))

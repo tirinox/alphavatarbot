@@ -1,6 +1,8 @@
 from typing import List
 
-from jobs.base import BaseFetcher
+import aioredis
+
+from jobs.base import BaseFetcher, INotified
 from lib.datetime import parse_timespan_to_seconds
 from lib.depcont import DepContainer
 
@@ -17,7 +19,7 @@ class DefiPulseFetcher(BaseFetcher):
         self._defipulse_api_key = cfg.api_token
 
     async def fetch(self):
-        return self._fetch_defipulse()
+        return await self._fetch_defipulse()
 
     async def _fetch_defipulse(self):
         url = self.URL_DEFI_PULSE_PROJECTS.format(api_key=self._defipulse_api_key)
@@ -27,8 +29,27 @@ class DefiPulseFetcher(BaseFetcher):
 
     @staticmethod
     def parse_defipulse(response):
-        return [DefiPulseEntry.from_json(item) for item in response]
+        return [DefiPulseEntry.parse(item) for item in response]
 
     @staticmethod
     def find_alpha(items: List[DefiPulseEntry]):
         return next((item for item in items if item.name == DefiPulseFetcher.ALPHA_NAME), None)
+
+
+class DefiPulsePersistance(INotified):
+    KEY = 'defipulse:last'
+
+    def __init__(self, deps: DepContainer):
+        self.deps = deps
+
+    async def on_data(self, sender, data):
+        data_to_save = DefiPulseEntry.schema().dumps(data, many=True)
+        r: aioredis.Redis = await self.deps.db.get_redis()
+        await r.set(self.KEY, data_to_save)
+
+    async def get_last_state(self):
+        r: aioredis.Redis = await self.deps.db.get_redis()
+        data = await r.get(self.KEY)
+        items = DefiPulseEntry.schema().loads(data, many=True)
+        return items
+

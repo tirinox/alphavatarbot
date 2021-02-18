@@ -1,6 +1,8 @@
 from dataclasses import dataclass
+from dataclasses_json import dataclass_json
 
 
+@dataclass_json
 @dataclass
 class DefiPulseEntry:
     category: str = ''
@@ -11,7 +13,7 @@ class DefiPulseEntry:
     tlv_usd_relative_1d: float = 0.0
 
     @classmethod
-    def from_json(cls, j):
+    def parse(cls, j):
         tlv_usd = j.get('value', {}).get('tvl', {}).get('USD', {})
         return cls(
             category=j.get('category', ''),

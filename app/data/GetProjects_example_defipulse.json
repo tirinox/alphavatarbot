@@ -1,0 +1,3291 @@
+[
+  {
+    "category": "Lending",
+    "chain": "Ethereum",
+    "id": 0,
+    "name": "Maker",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 6541917187,
+          "relative_1d": 3.41
+        },
+        "ETH": {
+          "value": 3600612.688164941,
+          "relative_1d": -1.25
+        },
+        "BTC": {
+          "value": 127117.63595900706,
+          "relative_1d": -3.39
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 6541917187,
+          "relative_1d": 3.41
+        },
+        "ETH": {
+          "value": 2816637.556688,
+          "relative_1d": 0.03
+        },
+        "BTC": {
+          "value": 13510.494964,
+          "relative_1d": 3.79
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 9020900.722623,
+            "relative_1d": 7.09
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 3.41,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Lending",
+    "variability": "medium",
+    "website": "https://aave.com",
+    "chain": "Ethereum",
+    "id": 22,
+    "name": "Aave",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 5405918880,
+          "relative_1d": 0.92
+        },
+        "ETH": {
+          "value": 2975369.383947294,
+          "relative_1d": -3.64
+        },
+        "BTC": {
+          "value": 105043.76753306082,
+          "relative_1d": -5.72
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 5405918880,
+          "relative_1d": 0.92
+        },
+        "ETH": {
+          "value": 428676.117553,
+          "relative_1d": 5.51
+        },
+        "BTC": {
+          "value": 11060.543643,
+          "relative_1d": -9.51
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 31470117.388206,
+            "relative_1d": 13.93
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 0.92,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Lending",
+    "permissioning": "Open",
+    "variability": "Medium",
+    "website": "https://compound.finance",
+    "chain": "Ethereum",
+    "id": 1,
+    "name": "Compound",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 4955362349,
+          "relative_1d": 4.64
+        },
+        "ETH": {
+          "value": 2727387.1004848946,
+          "relative_1d": -0.08
+        },
+        "BTC": {
+          "value": 96288.89041532163,
+          "relative_1d": -2.24
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 4955362349,
+          "relative_1d": 4.64
+        },
+        "ETH": {
+          "value": 1279510.218524,
+          "relative_1d": 4.72
+        },
+        "BTC": {
+          "value": 32719.580168,
+          "relative_1d": 0.31
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 316516113.934991,
+            "relative_1d": 19.57
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 4.64,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "DEXes",
+    "chain": "Ethereum",
+    "id": 33,
+    "name": "Curve Finance",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 4294025315,
+          "relative_1d": 1
+        },
+        "ETH": {
+          "value": 2363393.1140575376,
+          "relative_1d": -3.55
+        },
+        "BTC": {
+          "value": 83438.28440317593,
+          "relative_1d": -5.64
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 4294025315,
+          "relative_1d": 1
+        },
+        "ETH": {
+          "value": 232416.01395,
+          "relative_1d": 0.67
+        },
+        "BTC": {
+          "value": 28479.070368999997,
+          "relative_1d": -0.08
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 449502614.0389329,
+            "relative_1d": 3.98
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 1,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "DEXes",
+    "chain": "Ethereum",
+    "id": 2,
+    "name": "Uniswap",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 4069959987,
+          "relative_1d": 2.82
+        },
+        "ETH": {
+          "value": 2240069.5622739955,
+          "relative_1d": -1.82
+        },
+        "BTC": {
+          "value": 79084.41473751586,
+          "relative_1d": -3.94
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 4069959987,
+          "relative_1d": 2.82
+        },
+        "ETH": {
+          "value": 1060710.160143,
+          "relative_1d": 0.58
+        },
+        "BTC": {
+          "value": 5711.6508650000005,
+          "relative_1d": -0.96
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 142379874.03281072,
+            "relative_1d": 2.68
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 2.82,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "DEXes",
+    "chain": "Ethereum",
+    "id": 43,
+    "name": "SushiSwap",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 3578053811,
+          "relative_1d": 1.81
+        },
+        "ETH": {
+          "value": 1969328.8041653594,
+          "relative_1d": -2.79
+        },
+        "BTC": {
+          "value": 69526.06228221211,
+          "relative_1d": -4.89
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 3578053811,
+          "relative_1d": 1.81
+        },
+        "ETH": {
+          "value": 961547.255247,
+          "relative_1d": -1.52
+        },
+        "BTC": {
+          "value": 11474.507727999999,
+          "relative_1d": 2.31
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 167591584.555192,
+            "relative_1d": -1.21
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 1.81,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Derivatives",
+    "chain": "Ethereum",
+    "id": 12,
+    "name": "Synthetix",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 2695553873,
+          "relative_1d": -0.63
+        },
+        "ETH": {
+          "value": 1483608.7341556174,
+          "relative_1d": -5.11
+        },
+        "BTC": {
+          "value": 52377.98433413669,
+          "relative_1d": -7.16
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 2695553873,
+          "relative_1d": -0.63
+        },
+        "ETH": {
+          "value": null,
+          "relative_1d": null
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": null,
+            "relative_1d": null
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": -0.63,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Assets",
+    "chain": "Ethereum",
+    "id": 63,
+    "name": "Badger DAO",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 2026955719,
+          "relative_1d": 3.68
+        },
+        "ETH": {
+          "value": 1115618.2922466411,
+          "relative_1d": -1
+        },
+        "BTC": {
+          "value": 39386.28567553425,
+          "relative_1d": -3.14
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 2026955719,
+          "relative_1d": 3.68
+        },
+        "ETH": {
+          "value": 157933.238966,
+          "relative_1d": -0.37
+        },
+        "BTC": {
+          "value": 19996.531176,
+          "relative_1d": -0.45
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": null,
+            "relative_1d": null
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 3.68,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "DEXes",
+    "chain": "Ethereum",
+    "id": 28,
+    "name": "Balancer",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 1438995877,
+          "relative_1d": 2.51
+        },
+        "ETH": {
+          "value": 792010.4557788308,
+          "relative_1d": -2.11
+        },
+        "BTC": {
+          "value": 27961.490310898076,
+          "relative_1d": -4.23
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 1438995877,
+          "relative_1d": 2.51
+        },
+        "ETH": {
+          "value": 261730.64955,
+          "relative_1d": 0.1
+        },
+        "BTC": {
+          "value": 3637.445467,
+          "relative_1d": -0.57
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 32896368.15911266,
+            "relative_1d": -0.32
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 2.51,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Lending",
+    "chain": "Ethereum",
+    "id": 13,
+    "name": "InstaDApp",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 1104595538,
+          "relative_1d": 16.65
+        },
+        "ETH": {
+          "value": 607959.5011255497,
+          "relative_1d": 11.38
+        },
+        "BTC": {
+          "value": 21463.673334241423,
+          "relative_1d": 8.98
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 1104595538,
+          "relative_1d": 16.65
+        },
+        "ETH": {
+          "value": 59133.428569,
+          "relative_1d": 0.02
+        },
+        "BTC": {
+          "value": 287.6292,
+          "relative_1d": 0
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 871221579.335568,
+            "relative_1d": 21.39
+          }
+        }
+      }
+    },
+    "contributesTo": [
+      "Maker",
+      "Compound"
+    ],
+    "relative_1d": 16.65,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Assets",
+    "chain": "Ethereum",
+    "id": 30,
+    "name": "RenVM",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 1102426316,
+          "relative_1d": 1.83
+        },
+        "ETH": {
+          "value": 606765.5807451194,
+          "relative_1d": -2.77
+        },
+        "BTC": {
+          "value": 21421.522636727514,
+          "relative_1d": -4.87
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 1102426316,
+          "relative_1d": 1.83
+        },
+        "ETH": {
+          "value": null,
+          "relative_1d": null
+        },
+        "BTC": {
+          "value": 18036.658978,
+          "relative_1d": 0.92
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": null,
+            "relative_1d": null
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 1.83,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Lending",
+    "chain": "Ethereum",
+    "id": 49,
+    "name": "Alpha Homora",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 1023102498,
+          "relative_1d": -7.57
+        },
+        "ETH": {
+          "value": 563106.4610405692,
+          "relative_1d": -11.74
+        },
+        "BTC": {
+          "value": 19880.161605829686,
+          "relative_1d": -13.64
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 1023102498,
+          "relative_1d": -7.57
+        },
+        "ETH": {
+          "value": 562113.926961,
+          "relative_1d": -10.55
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": null,
+            "relative_1d": null
+          }
+        }
+      }
+    },
+    "contributesTo": [
+      "Uniswap",
+      "Sushiswap"
+    ],
+    "relative_1d": -7.57,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "DEXes",
+    "chain": "Ethereum",
+    "id": 14,
+    "name": "Bancor",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 630769686,
+          "relative_1d": 11.75
+        },
+        "ETH": {
+          "value": 347169.99157901685,
+          "relative_1d": 6.7
+        },
+        "BTC": {
+          "value": 12256.644195720111,
+          "relative_1d": 4.4
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 630769686,
+          "relative_1d": 11.75
+        },
+        "ETH": {
+          "value": 37348.785505,
+          "relative_1d": 7.07
+        },
+        "BTC": {
+          "value": 812.1016559999999,
+          "relative_1d": 7.51
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 18980511.013161,
+            "relative_1d": 18.21
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 11.75,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Payments",
+    "website": "https://flexa.network",
+    "chain": "Ethereum",
+    "id": 31,
+    "name": "Flexa",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 610731109,
+          "relative_1d": -9.69
+        },
+        "ETH": {
+          "value": 336140.93808651046,
+          "relative_1d": -13.77
+        },
+        "BTC": {
+          "value": 11867.26957305072,
+          "relative_1d": -15.63
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 610731109,
+          "relative_1d": -9.69
+        },
+        "ETH": {
+          "value": null,
+          "relative_1d": null
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": null,
+            "relative_1d": null
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": -9.69,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Assets",
+    "website": "https://harvest.finance",
+    "chain": "Ethereum",
+    "id": 45,
+    "name": "Harvest Finance",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 538931462,
+          "relative_1d": 2.66
+        },
+        "ETH": {
+          "value": 296623.0547804215,
+          "relative_1d": -1.98
+        },
+        "BTC": {
+          "value": 10472.112598659749,
+          "relative_1d": -4.1
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 538931462,
+          "relative_1d": 2.66
+        },
+        "ETH": {
+          "value": 27521.826957,
+          "relative_1d": -1.14
+        },
+        "BTC": {
+          "value": 5790.015683,
+          "relative_1d": 2.3
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 18338834.246719,
+            "relative_1d": 0.9
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 2.66,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Assets",
+    "chain": "Ethereum",
+    "id": 36,
+    "name": "yearn.finance",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 491019030,
+          "relative_1d": 0.55
+        },
+        "ETH": {
+          "value": 270252.48088767065,
+          "relative_1d": -3.99
+        },
+        "BTC": {
+          "value": 9541.114098558026,
+          "relative_1d": -6.06
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 491019030,
+          "relative_1d": 0.55
+        },
+        "ETH": {
+          "value": 20346.141511,
+          "relative_1d": -0.32
+        },
+        "BTC": {
+          "value": 3.1558,
+          "relative_1d": 0
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 95037072.531657,
+            "relative_1d": 4.96
+          }
+        }
+      }
+    },
+    "contributesTo": [
+      "Curve",
+      "Aave"
+    ],
+    "relative_1d": 0.55,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Derivatives",
+    "chain": "Ethereum",
+    "id": 17,
+    "name": "Nexus Mutual",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 294073197,
+          "relative_1d": 3.39
+        },
+        "ETH": {
+          "value": 161855.25650975018,
+          "relative_1d": -1.27
+        },
+        "BTC": {
+          "value": 5714.210151701721,
+          "relative_1d": -3.41
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 294073197,
+          "relative_1d": 3.39
+        },
+        "ETH": {
+          "value": 161376.157278,
+          "relative_1d": 0.05
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 352200.281095,
+            "relative_1d": 0.54
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 3.39,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "DEXes",
+    "chain": "Ethereum",
+    "id": 26,
+    "name": "Loopring",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 230515690,
+          "relative_1d": 3.98
+        },
+        "ETH": {
+          "value": 126873.77331594097,
+          "relative_1d": -0.72
+        },
+        "BTC": {
+          "value": 4479.208269785046,
+          "relative_1d": -2.86
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 230515690,
+          "relative_1d": 3.98
+        },
+        "ETH": {
+          "value": 47767.677922,
+          "relative_1d": -0.48
+        },
+        "BTC": {
+          "value": 203.657937,
+          "relative_1d": 1.36
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 3246768.848042,
+            "relative_1d": -0.84
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 3.98,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Lending",
+    "permissioning": "Open",
+    "variability": "Medium",
+    "website": "https://dydx.exchange/",
+    "chain": "Ethereum",
+    "id": 11,
+    "name": "dYdX",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 212150966,
+          "relative_1d": 4.13
+        },
+        "ETH": {
+          "value": 116765.99353840903,
+          "relative_1d": -0.57
+        },
+        "BTC": {
+          "value": 4122.358705171375,
+          "relative_1d": -2.72
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 212150966,
+          "relative_1d": 4.13
+        },
+        "ETH": {
+          "value": 114324.7446424536,
+          "relative_1d": 1.99
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 2779413.537395275,
+            "relative_1d": 0.08
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 4.13,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Lending",
+    "permissioning": "Open",
+    "variability": "Medium",
+    "website": "https://cream.finance",
+    "chain": "Ethereum",
+    "id": 42,
+    "name": "C.R.E.A.M. Finance",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 182038781,
+          "relative_1d": 8.83
+        },
+        "ETH": {
+          "value": 100192.51633285449,
+          "relative_1d": 3.92
+        },
+        "BTC": {
+          "value": 3537.241275319649,
+          "relative_1d": 1.68
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 182038781,
+          "relative_1d": 8.83
+        },
+        "ETH": {
+          "value": 39237.788517,
+          "relative_1d": 7.31
+        },
+        "BTC": {
+          "value": 98.213938,
+          "relative_1d": -0.77
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 4934997.753652,
+            "relative_1d": 162.96
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 8.83,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Assets",
+    "chain": "Ethereum",
+    "id": 18,
+    "name": "Set Protocol",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 177370621,
+          "relative_1d": 2.01
+        },
+        "ETH": {
+          "value": 97623.2028356147,
+          "relative_1d": -2.6
+        },
+        "BTC": {
+          "value": 3446.533085882827,
+          "relative_1d": -4.7
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 177370621,
+          "relative_1d": 2.01
+        },
+        "ETH": {
+          "value": 17189.033564,
+          "relative_1d": -5.45
+        },
+        "BTC": {
+          "value": 284.016942,
+          "relative_1d": 15
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 153435.665892,
+            "relative_1d": -0.59
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 2.01,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Lending",
+    "website": "https://idle.finance",
+    "chain": "Ethereum",
+    "id": 54,
+    "name": "Idle Finance",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 124891058,
+          "relative_1d": 2.64
+        },
+        "ETH": {
+          "value": 68738.9209033018,
+          "relative_1d": -1.99
+        },
+        "BTC": {
+          "value": 2426.7895162181967,
+          "relative_1d": -4.11
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 124891058,
+          "relative_1d": 2.64
+        },
+        "ETH": {
+          "value": null,
+          "relative_1d": null
+        },
+        "BTC": {
+          "value": 85.640726,
+          "relative_1d": 0
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 17740997.796644,
+            "relative_1d": 2.64
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 2.64,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Assets",
+    "chain": "Ethereum",
+    "id": 69,
+    "name": "Index Coop",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 123449438,
+          "relative_1d": 1.28
+        },
+        "ETH": {
+          "value": 67945.4661537022,
+          "relative_1d": -3.29
+        },
+        "BTC": {
+          "value": 2398.7770359141987,
+          "relative_1d": -5.38
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 123449438,
+          "relative_1d": 1.28
+        },
+        "ETH": {
+          "value": null,
+          "relative_1d": null
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": null,
+            "relative_1d": null
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 1.28,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Assets",
+    "chain": "Ethereum",
+    "id": 59,
+    "name": "cvault.finance",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 82041602,
+          "relative_1d": 2.87
+        },
+        "ETH": {
+          "value": 45154.96370171006,
+          "relative_1d": -1.78
+        },
+        "BTC": {
+          "value": 1594.1709744131228,
+          "relative_1d": -3.9
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 82041602,
+          "relative_1d": 2.87
+        },
+        "ETH": {
+          "value": 18576.509576,
+          "relative_1d": 0.13
+        },
+        "BTC": {
+          "value": 108.562909,
+          "relative_1d": -1.5
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 2036743.467577,
+            "relative_1d": 0.82
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 2.87,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Derivatives",
+    "chain": "Ethereum",
+    "id": 47,
+    "name": "HEGIC",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 67563165,
+          "relative_1d": 3.06
+        },
+        "ETH": {
+          "value": 37186.161517758366,
+          "relative_1d": -1.59
+        },
+        "BTC": {
+          "value": 1312.8368285944075,
+          "relative_1d": -3.71
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 67563165,
+          "relative_1d": 3.06
+        },
+        "ETH": {
+          "value": 18275.483913,
+          "relative_1d": -2.36
+        },
+        "BTC": {
+          "value": 667.855837,
+          "relative_1d": -0.28
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": null,
+            "relative_1d": null
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 3.06,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Payments",
+    "website": "https://matic.network",
+    "chain": "Ethereum",
+    "id": 61,
+    "name": "Matic Network",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 58074014,
+          "relative_1d": -2.2
+        },
+        "ETH": {
+          "value": 31963.417708281733,
+          "relative_1d": -6.62
+        },
+        "BTC": {
+          "value": 1128.450752174017,
+          "relative_1d": -8.64
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 58074014,
+          "relative_1d": -2.2
+        },
+        "ETH": {
+          "value": 1343.23149,
+          "relative_1d": 3.8
+        },
+        "BTC": {
+          "value": 4.523531,
+          "relative_1d": 11.05
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 887334.705656,
+            "relative_1d": -13.47
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": -2.2,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Payments",
+    "chain": "Bitcoin",
+    "id": 3,
+    "name": "Lightning Network",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 55640123,
+          "relative_1d": 5.83
+        },
+        "ETH": {
+          "value": 30623.82587828652,
+          "relative_1d": 1.05
+        },
+        "BTC": {
+          "value": 1081.15720484561,
+          "relative_1d": -1.13
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 55640123,
+          "relative_1d": 5.83
+        },
+        "ETH": {
+          "value": null,
+          "relative_1d": null
+        },
+        "BTC": {
+          "value": 1083.37,
+          "relative_1d": 0.26
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": null,
+            "relative_1d": null
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 5.83,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Lending",
+    "website": "https://app.truefi.com",
+    "chain": "Ethereum",
+    "id": 64,
+    "name": "TrueFi",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 52403541,
+          "relative_1d": -0.59
+        },
+        "ETH": {
+          "value": 28842.440103693672,
+          "relative_1d": -5.08
+        },
+        "BTC": {
+          "value": 1018.2663670885904,
+          "relative_1d": -7.13
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 52403541,
+          "relative_1d": -0.59
+        },
+        "ETH": {
+          "value": null,
+          "relative_1d": null
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": null,
+            "relative_1d": null
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": -0.59,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Assets",
+    "chain": "Ethereum",
+    "id": 25,
+    "name": "dForce",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 51626737,
+          "relative_1d": -1.84
+        },
+        "ETH": {
+          "value": 28414.894132280984,
+          "relative_1d": -6.27
+        },
+        "BTC": {
+          "value": 1003.1720934588774,
+          "relative_1d": -8.29
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 51626737,
+          "relative_1d": -1.84
+        },
+        "ETH": {
+          "value": null,
+          "relative_1d": null
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 2398297.78281,
+            "relative_1d": 0.02
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": -1.84,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Derivatives",
+    "chain": "Ethereum",
+    "id": 65,
+    "name": "DerivaDEX",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 51395527,
+          "relative_1d": -6.38
+        },
+        "ETH": {
+          "value": 28287.638216953143,
+          "relative_1d": -10.6
+        },
+        "BTC": {
+          "value": 998.6793938770962,
+          "relative_1d": -12.54
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 51395527,
+          "relative_1d": -6.38
+        },
+        "ETH": {
+          "value": null,
+          "relative_1d": null
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": null,
+            "relative_1d": null
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": -6.38,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Assets",
+    "chain": "Ethereum",
+    "id": 34,
+    "name": "mStable",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 45672016,
+          "relative_1d": -0.06
+        },
+        "ETH": {
+          "value": 25137.468971704395,
+          "relative_1d": -4.57
+        },
+        "BTC": {
+          "value": 887.4644140923983,
+          "relative_1d": -6.64
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 45672016,
+          "relative_1d": -0.06
+        },
+        "ETH": {
+          "value": null,
+          "relative_1d": null
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": null,
+            "relative_1d": null
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": -0.06,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Assets",
+    "website": "https://metronome.io",
+    "chain": "Ethereum",
+    "id": 37,
+    "name": "Metronome",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 45327971,
+          "relative_1d": 3.32
+        },
+        "ETH": {
+          "value": 24948.10968192901,
+          "relative_1d": -1.35
+        },
+        "BTC": {
+          "value": 880.7791892854527,
+          "relative_1d": -3.48
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 45327971,
+          "relative_1d": 3.32
+        },
+        "ETH": {
+          "value": 15267.065027,
+          "relative_1d": -0.38
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": null,
+            "relative_1d": null
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 3.32,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "DEXes",
+    "chain": "Ethereum",
+    "id": 55,
+    "name": "DeFi Swap",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 43659036,
+          "relative_1d": 3.26
+        },
+        "ETH": {
+          "value": 24029.5427901524,
+          "relative_1d": -1.4
+        },
+        "BTC": {
+          "value": 848.3496941229598,
+          "relative_1d": -3.53
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 43659036,
+          "relative_1d": 3.26
+        },
+        "ETH": {
+          "value": 11092.857309,
+          "relative_1d": -0.32
+        },
+        "BTC": {
+          "value": 101.765838,
+          "relative_1d": -6.06
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 1202648.358204,
+            "relative_1d": 2.5
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 3.26,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Derivatives",
+    "chain": "Ethereum",
+    "id": 68,
+    "name": "Futureswap",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 43246573,
+          "relative_1d": -4.77
+        },
+        "ETH": {
+          "value": 23802.526845323602,
+          "relative_1d": -9.07
+        },
+        "BTC": {
+          "value": 840.3350219738304,
+          "relative_1d": -11.03
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 43246573,
+          "relative_1d": -4.77
+        },
+        "ETH": {
+          "value": 10997.485282,
+          "relative_1d": -6.69
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": null,
+            "relative_1d": null
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": -4.77,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Lending",
+    "variability": "medium",
+    "website": "https://bzx.network",
+    "chain": "Ethereum",
+    "id": 19,
+    "name": "bZx",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 37045965,
+          "relative_1d": 1.54
+        },
+        "ETH": {
+          "value": 20389.767679936595,
+          "relative_1d": -3.04
+        },
+        "BTC": {
+          "value": 719.8494505522265,
+          "relative_1d": -5.14
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 37045965,
+          "relative_1d": 1.54
+        },
+        "ETH": {
+          "value": 3095.307854,
+          "relative_1d": 3.57
+        },
+        "BTC": {
+          "value": 69.87011,
+          "relative_1d": -28.3
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 2177541.973038257,
+            "relative_1d": 18.04
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 1.54,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Assets",
+    "website": "https://vesper.finance",
+    "chain": "Ethereum",
+    "id": 71,
+    "name": "Vesper",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 36826552,
+          "relative_1d": 8.49
+        },
+        "ETH": {
+          "value": 20269.004727859145,
+          "relative_1d": 3.59
+        },
+        "BTC": {
+          "value": 715.5859814404348,
+          "relative_1d": 1.36
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 36826552,
+          "relative_1d": 8.49
+        },
+        "ETH": {
+          "value": 8215.750103,
+          "relative_1d": 22.71
+        },
+        "BTC": {
+          "value": 180.109304,
+          "relative_1d": 4.03
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 69840.941132,
+            "relative_1d": 0.02
+          }
+        }
+      }
+    },
+    "contributesTo": [
+      "Aave",
+      "Maker",
+      "Compound"
+    ],
+    "relative_1d": 8.49,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Lending",
+    "chain": "Ethereum",
+    "id": 57,
+    "name": "B.Protocol",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 30975225,
+          "relative_1d": 3.13
+        },
+        "ETH": {
+          "value": 17048.486699800207,
+          "relative_1d": -1.53
+        },
+        "BTC": {
+          "value": 601.8873768568747,
+          "relative_1d": -3.65
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 30975225,
+          "relative_1d": 3.13
+        },
+        "ETH": {
+          "value": 17018.436777,
+          "relative_1d": -0.21
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": null,
+            "relative_1d": null
+          }
+        }
+      }
+    },
+    "contributesTo": [
+      "Maker"
+    ],
+    "relative_1d": 3.13,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Assets",
+    "website": "https://pickle.finance",
+    "chain": "Ethereum",
+    "id": 56,
+    "name": "Pickle Finance",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 28780280,
+          "relative_1d": 9.77
+        },
+        "ETH": {
+          "value": 15840.40861031763,
+          "relative_1d": 4.81
+        },
+        "BTC": {
+          "value": 559.2368492692586,
+          "relative_1d": 2.55
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 28780280,
+          "relative_1d": 9.77
+        },
+        "ETH": {
+          "value": 7532.018276,
+          "relative_1d": 19.93
+        },
+        "BTC": {
+          "value": 54.19583,
+          "relative_1d": -0.37
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 5691375.121654,
+            "relative_1d": 0.84
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 9.77,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "DEXes",
+    "chain": "Ethereum",
+    "id": 44,
+    "name": "DODO",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 26623866,
+          "relative_1d": 0.29
+        },
+        "ETH": {
+          "value": 14653.537638492147,
+          "relative_1d": -4.24
+        },
+        "BTC": {
+          "value": 517.3350272202682,
+          "relative_1d": -6.31
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 26623866,
+          "relative_1d": 0.29
+        },
+        "ETH": {
+          "value": 4796.139241,
+          "relative_1d": 0.33
+        },
+        "BTC": {
+          "value": 130.119201,
+          "relative_1d": -2.47
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": null,
+            "relative_1d": null
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 0.29,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "DEXes",
+    "chain": "Ethereum",
+    "id": 72,
+    "name": "PowerIndex",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 26157913,
+          "relative_1d": -2.6
+        },
+        "ETH": {
+          "value": 14397.081276246772,
+          "relative_1d": -7
+        },
+        "BTC": {
+          "value": 508.2809774463411,
+          "relative_1d": -9.01
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 26157913,
+          "relative_1d": -2.6
+        },
+        "ETH": {
+          "value": null,
+          "relative_1d": null
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": null,
+            "relative_1d": null
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": -2.6,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Derivatives",
+    "chain": "Ethereum",
+    "id": 66,
+    "name": "Cover Protocol",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 23020155,
+          "relative_1d": -3.08
+        },
+        "ETH": {
+          "value": 12670.087347060085,
+          "relative_1d": -7.46
+        },
+        "BTC": {
+          "value": 447.3104136544179,
+          "relative_1d": -9.46
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 23020155,
+          "relative_1d": -3.08
+        },
+        "ETH": {
+          "value": null,
+          "relative_1d": null
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 22983768.838482,
+            "relative_1d": -3.08
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": -3.08,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "DEXes",
+    "chain": "Ethereum",
+    "id": 39,
+    "name": "Gnosis",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 22059526,
+          "relative_1d": 3.05
+        },
+        "ETH": {
+          "value": 12141.365740358524,
+          "relative_1d": -1.61
+        },
+        "BTC": {
+          "value": 428.64419027936117,
+          "relative_1d": -3.73
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 22059526,
+          "relative_1d": 3.05
+        },
+        "ETH": {
+          "value": 8558.015116,
+          "relative_1d": -0.86
+        },
+        "BTC": {
+          "value": 0.12234400000000001,
+          "relative_1d": 0
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 569656.8804759906,
+            "relative_1d": 0.35
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 3.05,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "DEXes",
+    "chain": "Ethereum",
+    "id": 52,
+    "name": "Swerve Finance",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 18979551,
+          "relative_1d": 1.87
+        },
+        "ETH": {
+          "value": 10446.175057378267,
+          "relative_1d": -2.73
+        },
+        "BTC": {
+          "value": 368.79642247348556,
+          "relative_1d": -4.83
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 18979551,
+          "relative_1d": 1.87
+        },
+        "ETH": {
+          "value": null,
+          "relative_1d": null
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 4416045.968691,
+            "relative_1d": 1.08
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 1.87,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Payments",
+    "chain": "Ethereum",
+    "id": 9,
+    "name": "xDai",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 16804569,
+          "relative_1d": 2.47
+        },
+        "ETH": {
+          "value": 9249.084424483595,
+          "relative_1d": -2.15
+        },
+        "BTC": {
+          "value": 326.5338009528697,
+          "relative_1d": -4.27
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 16804569,
+          "relative_1d": 2.47
+        },
+        "ETH": {
+          "value": 513.753729,
+          "relative_1d": 0.56
+        },
+        "BTC": {
+          "value": 4.1925870000000005,
+          "relative_1d": 0
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 4061744.779012,
+            "relative_1d": 12.3
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 2.47,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Lending",
+    "chain": "Ethereum",
+    "id": 67,
+    "name": "Notional",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 15329583,
+          "relative_1d": 6.04
+        },
+        "ETH": {
+          "value": 8437.265327014844,
+          "relative_1d": 1.25
+        },
+        "BTC": {
+          "value": 297.8729775225116,
+          "relative_1d": -0.94
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 15329583,
+          "relative_1d": 6.04
+        },
+        "ETH": {
+          "value": 3721.488281,
+          "relative_1d": 0
+        },
+        "BTC": {
+          "value": 25.241726,
+          "relative_1d": 13.49
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 786990.532063,
+            "relative_1d": 1.29
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 6.04,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "DEXes",
+    "chain": "Ethereum",
+    "id": 6,
+    "name": "Kyber",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 14880196,
+          "relative_1d": 2.48
+        },
+        "ETH": {
+          "value": 8189.926742950866,
+          "relative_1d": -2.14
+        },
+        "BTC": {
+          "value": 289.14082585537824,
+          "relative_1d": -4.26
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 14880196,
+          "relative_1d": 2.48
+        },
+        "ETH": {
+          "value": 3251.761194,
+          "relative_1d": -1.95
+        },
+        "BTC": {
+          "value": 42.691704,
+          "relative_1d": 0
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": null,
+            "relative_1d": null
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 2.48,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "DEXes",
+    "chain": "Ethereum",
+    "id": 29,
+    "name": "DeversiFi",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 14364011,
+          "relative_1d": 3.11
+        },
+        "ETH": {
+          "value": 7905.823137339079,
+          "relative_1d": -1.54
+        },
+        "BTC": {
+          "value": 279.1107054729479,
+          "relative_1d": -3.67
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 14364011,
+          "relative_1d": 3.11
+        },
+        "ETH": {
+          "value": 1937.024585,
+          "relative_1d": 1.07
+        },
+        "BTC": {
+          "value": 77.624641,
+          "relative_1d": 0
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 76073.565833,
+            "relative_1d": 0
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 3.11,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Lending",
+    "permissioning": "Open",
+    "variability": "Medium",
+    "website": "https://for.tube",
+    "chain": "Ethereum",
+    "id": 40,
+    "name": "ForTube",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 14066514,
+          "relative_1d": 5.73
+        },
+        "ETH": {
+          "value": 7742.083450291431,
+          "relative_1d": 0.95
+        },
+        "BTC": {
+          "value": 273.32996654521486,
+          "relative_1d": -1.23
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 14066514,
+          "relative_1d": 5.73
+        },
+        "ETH": {
+          "value": 1437.29001,
+          "relative_1d": 0
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 249307.042166,
+            "relative_1d": 0
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 5.73,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Derivatives",
+    "chain": "Ethereum",
+    "id": 27,
+    "name": "Opyn",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 11591167,
+          "relative_1d": 2.13
+        },
+        "ETH": {
+          "value": 6379.674608809559,
+          "relative_1d": -2.48
+        },
+        "BTC": {
+          "value": 225.23087726852572,
+          "relative_1d": -4.58
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 11591167,
+          "relative_1d": 2.13
+        },
+        "ETH": {
+          "value": 4508.338596,
+          "relative_1d": -0.57
+        },
+        "BTC": {
+          "value": 6.990727,
+          "relative_1d": 0
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 1.801998,
+            "relative_1d": 0
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 2.13,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Assets",
+    "chain": "Ethereum",
+    "id": 48,
+    "name": "Value DeFi",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 11206422,
+          "relative_1d": 4.06
+        },
+        "ETH": {
+          "value": 6167.914403183461,
+          "relative_1d": -0.64
+        },
+        "BTC": {
+          "value": 217.75480053917838,
+          "relative_1d": -2.79
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 11206422,
+          "relative_1d": 4.06
+        },
+        "ETH": {
+          "value": 2753.829211,
+          "relative_1d": 0.49
+        },
+        "BTC": {
+          "value": 77.462037,
+          "relative_1d": -1
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 67572.343127,
+            "relative_1d": 0
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 4.06,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Assets",
+    "chain": "Ethereum",
+    "id": 35,
+    "name": "PieDAO",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 10344699,
+          "relative_1d": 2.73
+        },
+        "ETH": {
+          "value": 5693.629773954394,
+          "relative_1d": -1.9
+        },
+        "BTC": {
+          "value": 201.01044449181353,
+          "relative_1d": -4.02
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 10344699,
+          "relative_1d": 2.73
+        },
+        "ETH": {
+          "value": null,
+          "relative_1d": null
+        },
+        "BTC": {
+          "value": 17.592229,
+          "relative_1d": 0
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": null,
+            "relative_1d": null
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 2.73,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Lending",
+    "chain": "Ethereum",
+    "id": 58,
+    "name": "QIAN",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 9124573,
+          "relative_1d": 4.66
+        },
+        "ETH": {
+          "value": 5022.083340213221,
+          "relative_1d": -0.07
+        },
+        "BTC": {
+          "value": 177.30186973328082,
+          "relative_1d": -2.23
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 9124573,
+          "relative_1d": 4.66
+        },
+        "ETH": {
+          "value": 2437.738071,
+          "relative_1d": 0
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": null,
+            "relative_1d": null
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 4.66,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Derivatives",
+    "chain": "Ethereum",
+    "id": 41,
+    "name": "Opium Network",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 8764397,
+          "relative_1d": -0.05
+        },
+        "ETH": {
+          "value": 4823.845692364424,
+          "relative_1d": -4.56
+        },
+        "BTC": {
+          "value": 170.303199413798,
+          "relative_1d": -6.62
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 8764397,
+          "relative_1d": -0.05
+        },
+        "ETH": {
+          "value": 0.008563,
+          "relative_1d": 0
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 13.299079,
+            "relative_1d": 0
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": -0.05,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Derivatives",
+    "chain": "Ethereum",
+    "id": 23,
+    "name": "Erasure",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 8008902,
+          "relative_1d": 0.35
+        },
+        "ETH": {
+          "value": 4408.0280038967685,
+          "relative_1d": -4.17
+        },
+        "BTC": {
+          "value": 155.62298631515276,
+          "relative_1d": -6.24
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 8008902,
+          "relative_1d": 0.35
+        },
+        "ETH": {
+          "value": null,
+          "relative_1d": null
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 5696.22101,
+            "relative_1d": 0
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 0.35,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Assets",
+    "chain": "Ethereum",
+    "id": 16,
+    "name": "Enzyme Finance",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 7826051,
+          "relative_1d": 0.81
+        },
+        "ETH": {
+          "value": 4307.3884494933645,
+          "relative_1d": -3.74
+        },
+        "BTC": {
+          "value": 152.06996260844338,
+          "relative_1d": -5.82
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 7826051,
+          "relative_1d": 0.81
+        },
+        "ETH": {
+          "value": 853.031223,
+          "relative_1d": 3.66
+        },
+        "BTC": {
+          "value": 60.224442,
+          "relative_1d": -7.51
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 961041.40241,
+            "relative_1d": -0.06
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 0.81,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Lending",
+    "chain": "Ethereum",
+    "id": 21,
+    "name": "DDEX",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 7507022,
+          "relative_1d": 1.84
+        },
+        "ETH": {
+          "value": 4131.797742295901,
+          "relative_1d": -2.76
+        },
+        "BTC": {
+          "value": 145.8708299806329,
+          "relative_1d": -4.86
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 7507022,
+          "relative_1d": 1.84
+        },
+        "ETH": {
+          "value": 2867.679764,
+          "relative_1d": -0.21
+        },
+        "BTC": {
+          "value": 24.403064,
+          "relative_1d": -6.51
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 37834.563213,
+            "relative_1d": 0
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 1.84,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "DEXes",
+    "chain": "Ethereum",
+    "id": 60,
+    "name": "Value Liquid",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 6776437,
+          "relative_1d": -0.82
+        },
+        "ETH": {
+          "value": 3729.690294954565,
+          "relative_1d": -5.29
+        },
+        "BTC": {
+          "value": 131.6746493484993,
+          "relative_1d": -7.34
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 6776437,
+          "relative_1d": -0.82
+        },
+        "ETH": {
+          "value": 295.357511,
+          "relative_1d": -5.69
+        },
+        "BTC": {
+          "value": 1.1872969999999998,
+          "relative_1d": -13.16
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 149258.02183,
+            "relative_1d": -3.86
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": -0.82,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "DEXes",
+    "chain": "Ethereum",
+    "id": 62,
+    "name": "S Finance",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 5569799,
+          "relative_1d": 0.87
+        },
+        "ETH": {
+          "value": 3065.567535734139,
+          "relative_1d": -3.69
+        },
+        "BTC": {
+          "value": 108.22816330567554,
+          "relative_1d": -5.77
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 5569799,
+          "relative_1d": 0.87
+        },
+        "ETH": {
+          "value": null,
+          "relative_1d": null
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 835198.313093,
+            "relative_1d": 3.73
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 0.87,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Assets",
+    "website": "https://dextf.com",
+    "chain": "Ethereum",
+    "id": 73,
+    "name": "DEXTF",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 4148281,
+          "relative_1d": 37.33
+        },
+        "ETH": {
+          "value": 2283.1767470787995,
+          "relative_1d": 31.13
+        },
+        "BTC": {
+          "value": 80.60629001258951,
+          "relative_1d": 28.3
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 4148281,
+          "relative_1d": 37.33
+        },
+        "ETH": {
+          "value": 169.688556,
+          "relative_1d": 8.57
+        },
+        "BTC": {
+          "value": 6.518185,
+          "relative_1d": 8.49
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 110682.128178,
+            "relative_1d": 11.44
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 37.33,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Derivatives",
+    "website": "https://mcdex.io",
+    "chain": "Ethereum",
+    "id": 32,
+    "name": "MCDEX",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 3285526,
+          "relative_1d": 3.26
+        },
+        "ETH": {
+          "value": 1808.324114283198,
+          "relative_1d": -1.4
+        },
+        "BTC": {
+          "value": 63.84188091402274,
+          "relative_1d": -3.53
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 3285526,
+          "relative_1d": 3.26
+        },
+        "ETH": {
+          "value": 1766.791162,
+          "relative_1d": 0
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": null,
+            "relative_1d": null
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 3.26,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Derivatives",
+    "chain": "Ethereum",
+    "id": 4,
+    "name": "Augur",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 2677543,
+          "relative_1d": 3.59
+        },
+        "ETH": {
+          "value": 1473.6957108025251,
+          "relative_1d": -1.08
+        },
+        "BTC": {
+          "value": 52.028010537178886,
+          "relative_1d": -3.22
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 2677543,
+          "relative_1d": 3.59
+        },
+        "ETH": {
+          "value": 1471.5660426716,
+          "relative_1d": 0
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": null,
+            "relative_1d": null
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 3.59,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "DEXes",
+    "website": "https://cream.finance",
+    "chain": "Ethereum",
+    "id": 53,
+    "name": "C.R.E.A.M. Swap",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 2202140,
+          "relative_1d": 2.5
+        },
+        "ETH": {
+          "value": 1212.038153107783,
+          "relative_1d": -2.12
+        },
+        "BTC": {
+          "value": 42.79033543974573,
+          "relative_1d": -4.24
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 2202140,
+          "relative_1d": 2.5
+        },
+        "ETH": {
+          "value": 978.521738,
+          "relative_1d": -0.04
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": null,
+            "relative_1d": null
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 2.5,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Lending",
+    "chain": "Ethereum",
+    "id": 24,
+    "name": "Robo-Advisor for Yield",
+    "shortName": "RAY",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 1341627,
+          "relative_1d": 3.17
+        },
+        "ETH": {
+          "value": 738.4194970526559,
+          "relative_1d": -1.49
+        },
+        "BTC": {
+          "value": 26.06949120629013,
+          "relative_1d": -3.62
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 1341627,
+          "relative_1d": 3.17
+        },
+        "ETH": {
+          "value": 0.770684,
+          "relative_1d": 0
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 1251212.824114,
+            "relative_1d": 0.03
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 3.17,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Lending",
+    "permissioning": "Open",
+    "variability": "Medium",
+    "website": "https://definer.org/",
+    "chain": "Ethereum",
+    "id": 50,
+    "name": "DeFiner",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 1008478,
+          "relative_1d": 1.63
+        },
+        "ETH": {
+          "value": 555.0572681890483,
+          "relative_1d": -2.96
+        },
+        "BTC": {
+          "value": 19.59598931203461,
+          "relative_1d": -5.06
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 1008478,
+          "relative_1d": 1.63
+        },
+        "ETH": {
+          "value": 244.037197,
+          "relative_1d": 0.12
+        },
+        "BTC": {
+          "value": 0.001226,
+          "relative_1d": 0
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 68776.867468,
+            "relative_1d": 0
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 1.63,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Assets",
+    "chain": "Ethereum",
+    "id": 46,
+    "name": "DFI.money",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 976358,
+          "relative_1d": 1.01
+        },
+        "ETH": {
+          "value": 537.3787075717297,
+          "relative_1d": -3.55
+        },
+        "BTC": {
+          "value": 18.97185752462571,
+          "relative_1d": -5.64
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 976358,
+          "relative_1d": 1.01
+        },
+        "ETH": {
+          "value": 49.791275,
+          "relative_1d": 0
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 181959.136237,
+            "relative_1d": 0.02
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 1.01,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Derivatives",
+    "chain": "Ethereum",
+    "id": 51,
+    "name": "PerlinX",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 950201,
+          "relative_1d": -0.23
+        },
+        "ETH": {
+          "value": 522.9821288025141,
+          "relative_1d": -4.73
+        },
+        "BTC": {
+          "value": 18.463594287911683,
+          "relative_1d": -6.79
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 950201,
+          "relative_1d": -0.23
+        },
+        "ETH": {
+          "value": null,
+          "relative_1d": null
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": null,
+            "relative_1d": null
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": -0.23,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Derivatives",
+    "chain": "Ethereum",
+    "id": 38,
+    "name": "Auctus",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 424051,
+          "relative_1d": 3.5
+        },
+        "ETH": {
+          "value": 233.39387634914607,
+          "relative_1d": -1.17
+        },
+        "BTC": {
+          "value": 8.2398414876255,
+          "relative_1d": -3.3
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 424051,
+          "relative_1d": 3.5
+        },
+        "ETH": {
+          "value": 188.841066,
+          "relative_1d": 0
+        },
+        "BTC": {
+          "value": 1.220444,
+          "relative_1d": 0
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": null,
+            "relative_1d": null
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 3.5,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "DEXes",
+    "chain": "Ethereum",
+    "id": 70,
+    "name": "UniTrade",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 89709,
+          "relative_1d": -25.08
+        },
+        "ETH": {
+          "value": 49.37503095949672,
+          "relative_1d": -28.46
+        },
+        "BTC": {
+          "value": 1.7431581107305394,
+          "relative_1d": -30
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 89709,
+          "relative_1d": -25.08
+        },
+        "ETH": {
+          "value": 17.533587,
+          "relative_1d": -52.24
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": null,
+            "relative_1d": null
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": -25.08,
+    "timestamp": 1613584800
+  },
+  {
+    "category": "Payments",
+    "chain": "Ethereum",
+    "id": 15,
+    "name": "Connext",
+    "value": {
+      "tvl": {
+        "USD": {
+          "value": 12783,
+          "relative_1d": 0.02
+        },
+        "ETH": {
+          "value": 7.0356488284926435,
+          "relative_1d": -4.5
+        },
+        "BTC": {
+          "value": 0.24838968363785668,
+          "relative_1d": -6.56
+        }
+      },
+      "total": {
+        "USD": {
+          "value": 12783,
+          "relative_1d": 0.02
+        },
+        "ETH": {
+          "value": null,
+          "relative_1d": null
+        },
+        "BTC": {
+          "value": null,
+          "relative_1d": null
+        }
+      },
+      "balance": {
+        "ERC20": {
+          "DAI": {
+            "value": 12768.9525837232,
+            "relative_1d": 0
+          }
+        }
+      }
+    },
+    "contributesTo": null,
+    "relative_1d": 0.02,
+    "timestamp": 1613584800
+  }
+]

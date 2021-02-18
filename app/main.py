@@ -5,6 +5,7 @@ import aiohttp
 from aiogram import Bot, Dispatcher, executor
 from aiogram.types import *
 
+from jobs.defipulse_job import DefiPulseFetcher
 from localization import LocalizationManager
 from dialog import init_dialogs
 from lib.config import Config
@@ -44,7 +45,10 @@ class App:
             self.deps.dp.storage = await self.deps.db.get_storage()
 
     async def _run_background_jobs(self):
-        ...
+        fetcher_defipulse = DefiPulseFetcher(self.deps)
+        await asyncio.gather(*(task.run() for task in [
+            fetcher_defipulse
+        ]))
 
     async def on_startup(self, _):
         await self.connect_chat_storage()

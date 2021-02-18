@@ -1,4 +1,6 @@
 from dataclasses import dataclass
+from typing import NamedTuple
+
 from dataclasses_json import dataclass_json
 
 
@@ -23,3 +25,34 @@ class DefiPulseEntry:
             tlv_usd=float(tlv_usd.get('value', 0.0)),
             tlv_usd_relative_1d=float(tlv_usd.get('relative_1d', 0.0))
         )
+
+
+class CoinPriceInfo(NamedTuple):
+    usd: float = 0.0
+    usd_market_cap: float = 0.0
+    usd_24h_change: float = 0.0
+    btc: float = 0.0
+    btc_market_cap: float = 0.0
+    btc_24h_change: float = 0.0
+
+
+REAL_REGISTERED_ATH = 2.93
+REAL_REGISTERED_ATH_DATE = 1612367085
+
+
+@dataclass
+class PriceATH:
+    ath_date: int = REAL_REGISTERED_ATH_DATE
+    ath_price: float = REAL_REGISTERED_ATH
+
+    def is_new_ath(self, price):
+        return price and float(price) > 0 and float(price) > self.ath_price
+
+
+@dataclass_json
+@dataclass
+class PriceReport:
+    price_and_cap: CoinPriceInfo
+    defipulse: DefiPulseEntry
+    price_ath: PriceATH
+    is_ath: bool = False

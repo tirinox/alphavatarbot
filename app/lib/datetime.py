@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, time
 
 MINUTE = 60
 HOUR = 60 * 60
@@ -100,3 +100,9 @@ def format_time_ago_short(d, now=None):
     minutes = minutes % 60
     hours = hours % 24
     return f'{days}{hours:02}:{minutes:02}'
+
+
+def delay_to_next_hour_minute(hour, minute, second=0, now=None):
+    now = now or datetime.now()
+    that_time = datetime.now().replace(hour=hour, minute=minute, second=second, microsecond=0)
+    return (now - that_time).seconds

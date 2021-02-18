@@ -1,18 +1,9 @@
 import asyncio
-from typing import NamedTuple
 
-from jobs.base import BaseFetcher
+from jobs.base import BaseFetcher, INotified
 from lib.datetime import parse_timespan_to_seconds
 from lib.depcont import DepContainer
-
-
-class CoinPriceInfo(NamedTuple):
-    usd: float = 0.0
-    usd_market_cap: float = 0.0
-    usd_24h_change: float = 0.0
-    btc: float = 0.0
-    btc_market_cap: float = 0.0
-    btc_24h_change: float = 0.0
+from models.models import CoinPriceInfo
 
 
 class PriceFetcher(BaseFetcher):
@@ -44,3 +35,12 @@ class PriceFetcher(BaseFetcher):
         async with self.deps.session.get(url) as reps:
             response_j = await reps.json()
             return int(response_j.get('market_cap_rank', 0))
+
+
+class PriceHandler(INotified):
+    def __init__(self, deps: DepContainer):
+        self.deps = deps
+
+    async def on_data(self, sender, data):
+        rank, price_data = data
+        print(f'rank = {rank}, data = {price_data}')

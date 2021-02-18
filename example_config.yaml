@@ -9,7 +9,7 @@ telegram:
 
   channels:
     - type: telegram
-      name: FILL_ME_PLEASE
+      name: -10012344   # fill this (integer number) instructions: https://stackoverflow.com/a/39943226
       lang: eng
 
 

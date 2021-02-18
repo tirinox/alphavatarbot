@@ -1,6 +1,7 @@
 from typing import List
 
 from jobs.base import BaseFetcher
+from lib.datetime import parse_timespan_to_seconds
 from lib.depcont import DepContainer
 
 from models.models import DefiPulseEntry
@@ -10,9 +11,10 @@ class DefiPulseFetcher(BaseFetcher):
     URL_DEFI_PULSE_PROJECTS = 'https://data-api.defipulse.com/api/v1/defipulse/api/GetProjects?api-key={api_key}'
     ALPHA_NAME = 'Alpha Homora'
 
-    def __init__(self, deps: DepContainer, sleep_period=60):
-        super().__init__(deps, sleep_period)
-        self._defipulse_api_key = deps.cfg.data_source.defi_pulse.api_token
+    def __init__(self, deps: DepContainer):
+        cfg = deps.cfg.data_source.defi_pulse
+        super().__init__(deps, parse_timespan_to_seconds(cfg.fetch_period))
+        self._defipulse_api_key = cfg.api_token
 
     async def fetch(self):
         return self._fetch_defipulse()

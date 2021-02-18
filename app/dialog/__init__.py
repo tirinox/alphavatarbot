@@ -1,7 +1,7 @@
 from aiogram.types import ContentTypes, Message
 
 from dialog.avatar_picture_dialog import AvatarDialog
-from dialog import MainMenuDialog
+from dialog.main_menu import MainMenuDialog
 from lib.depcont import DepContainer
 
 

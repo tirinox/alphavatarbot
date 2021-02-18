@@ -6,6 +6,7 @@ from aiogram import Bot, Dispatcher, executor
 from aiogram.types import *
 
 from jobs.defipulse_job import DefiPulseFetcher
+from lib.broadcast import Broadcaster
 from localization import LocalizationManager
 from dialog import init_dialogs
 from lib.config import Config
@@ -37,6 +38,7 @@ class App:
         d.bot = Bot(token=d.cfg.telegram.bot.token, parse_mode=ParseMode.HTML)
         d.dp = Dispatcher(d.bot, loop=d.loop)
         d.loc_man = LocalizationManager()
+        d.broadcaster = Broadcaster(d)
 
         init_dialogs(d)
 
@@ -50,7 +52,7 @@ class App:
             fetcher_defipulse
         ]))
 
-    async def on_startup(self, _):
+    async def on_startup(self, _=None):
         await self.connect_chat_storage()
 
         self.deps.session = aiohttp.ClientSession()

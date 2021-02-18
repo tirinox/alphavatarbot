@@ -1,7 +1,6 @@
 import asyncio
 import time
 from functools import wraps, partial
-from io import BytesIO
 
 
 def a_result_cached(ttl=60):

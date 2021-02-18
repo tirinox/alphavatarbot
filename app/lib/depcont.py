@@ -16,3 +16,5 @@ class DepContainer:
 
     bot: typing.Optional['Bot'] = None
     dp: typing.Optional['Dispatcher'] = None
+    broadcaster: typing.Optional['Broadcaster'] = None
+    loc_man: typing.Optional['LocalizationManager'] = None

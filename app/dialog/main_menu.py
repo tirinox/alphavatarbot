@@ -2,7 +2,7 @@ from aiogram import filters
 from aiogram.types import *
 
 from dialog.avatar_picture_dialog import AvatarDialog
-from dialog import BaseDialog, message_handler
+from dialog.base import BaseDialog, message_handler
 
 
 class MainMenuDialog(BaseDialog):

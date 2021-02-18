@@ -6,9 +6,9 @@ from aiogram.dispatcher.storage import FSMContextProxy
 from aiogram.types import Message, PhotoSize, ReplyKeyboardRemove, ContentTypes
 from aiogram.utils.helper import HelperMode
 
+from dialog.avatar_image_work import download_tg_photo, get_userpic, combine_frame_and_photo_v2, img_to_bio
+from dialog.base import BaseDialog, message_handler
 from localization import BaseLocalization
-from dialog import download_tg_photo, get_userpic, combine_frame_and_photo_v2, img_to_bio
-from dialog import BaseDialog, message_handler
 from lib.depcont import DepContainer
 from lib.texts import kbd
 

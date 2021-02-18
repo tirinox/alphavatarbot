@@ -35,6 +35,7 @@ class BaseFetcher(ABC):
             await delegate.on_error(self, e)
 
     async def run(self):
+        self.logger.info(f'Starting job after sleep {self.startup_sleep} sec every {self.sleep_period} sec')
         await asyncio.sleep(self.startup_sleep)
         while True:
             try:

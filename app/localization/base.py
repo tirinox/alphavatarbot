@@ -66,11 +66,11 @@ class BaseLocalization(ABC):  # == English
             last_ath_pr = f'{last_ath.ath_price:.2f}'
             message += f"Last ATH was ${pre(last_ath_pr)} ({format_time_ago(last_ath.ath_date)}).\n"
 
-        # time_combos = zip(
-        #     ('1h', '24h', '7d'),
-        #     (p.price_1h, p.price_24h, p.price_7d)
-        # )
-        time_combos = [('24h', p.price_and_cap.usd_24h_change)]
+        time_combos = [
+            ('1h', p.price_change.price_1h),
+            ('24h', p.price_change.price_24h),
+            ('7d', p.price_change.price_7d)
+        ]
         for title, old_price in time_combos:
             if old_price:
                 pc = calc_percent_change(old_price, price)
@@ -79,9 +79,10 @@ class BaseLocalization(ABC):  # == English
 
         # TODO: TLV and defipulse rank (+ TLV ATH)
 
-        # fp = p.fair_price
-        # if fp.rank >= 1:
-        #     message += f"Coin market cap is {bold(pretty_dollar(fp.market_cap))} (#{bold(fp.rank)})\n"
+        if p.price_and_cap.rank >= 1:
+            message += (f"TVL of Alpha Homora v1 & v2: {code(pretty_dollar(p.defipulse.tlv_usd))}"
+                        f" ({adaptive_round_to_str(p.defipulse.tlv_usd_relative_1d, force_sign=True)} %)\n"
+                        f"DeFi Pulse rank: #{bold(p.defipulse.rank)}\n")
         #
         # if fp.tlv_usd >= 1:
         #     message += (f"TVL of non-RUNE assets: ${pre(pretty_money(fp.tlv_usd))}\n"

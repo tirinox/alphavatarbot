@@ -19,9 +19,10 @@ class PriceFetcher(BaseFetcher):
         cfg = deps.cfg.data_source.coin_gecko
         super().__init__(deps, parse_timespan_to_seconds(cfg.fetch_period))
 
-    async def fetch(self):
+    async def fetch(self) -> CoinPriceInfo:
         rank, price_data = await asyncio.gather(self._fetch_rank(), self._fetch_price())
-        return rank, price_data
+        price_data.rank = rank
+        return price_data
 
     async def _fetch_price(self):
         url = self.COIN_PRICE_GECKO.format(coin=self.ALPHA_GECKO_NAME)

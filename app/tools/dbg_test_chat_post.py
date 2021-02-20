@@ -1,13 +1,15 @@
 import asyncio
 from datetime import datetime
 
+from jobs.price_job import PriceHandler
+from lib.texts import MessageType, code
 from localization import LocalizationManager
 from main import App
 from models.models import PriceReport, CoinPriceInfo, DefiPulseEntry, PriceATH, PriceHistoricalTriplet
 
 
 class TestApp(App):
-    async def _run_background_jobs(self):
+    async def _test_send_message(self):
         is_ath = False
         tlv_is_ath = False
         rank_delta = -2
@@ -21,8 +23,19 @@ class TestApp(App):
 
         user_lang_map = self.deps.broadcaster.telegram_chats_from_config(self.deps.loc_man)
         await self.deps.broadcaster.broadcast(user_lang_map.keys(), text)
-        await asyncio.sleep(1.0)
-        await self.deps.dp.stop_polling()
+
+    async def _test_all_stickers(self):
+        chat_ids = self.deps.broadcaster.telegram_chats_from_config(self.deps.loc_man).keys()
+        ph = PriceHandler(self.deps)
+        for sticker in ph.stickers:
+            await self.deps.broadcaster.broadcast(chat_ids, sticker, message_type=MessageType.STICKER)
+            await asyncio.sleep(1.0)
+            await self.deps.broadcaster.broadcast(chat_ids, f'☝️ {code(sticker)}')
+            await asyncio.sleep(1.0)
+
+    async def _run_background_jobs(self):
+        # await self._test_all_stickers()
+        exit(0)
 
 
 if __name__ == '__main__':

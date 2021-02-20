@@ -1,5 +1,7 @@
 import asyncio
+import random
 import time
+from collections import deque
 from functools import wraps, partial
 
 
@@ -44,3 +46,20 @@ def async_wrap(func):
         return await loop.run_in_executor(executor, pfunc)
 
     return run
+
+
+def circular_shuffled_iterator(lst):
+    if not lst:
+        return None
+
+    lst = list(lst)
+    random.shuffle(lst)
+    d = deque(lst)
+    shifts = 0
+    while True:
+        yield d[0]
+        d.rotate(1)
+        shifts += 1
+        if shifts >= len(d):
+            random.shuffle(d)
+            shifts = 0

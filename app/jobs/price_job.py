@@ -1,12 +1,13 @@
 import asyncio
 from collections import namedtuple
-from datetime import datetime
 from typing import List
 
 from jobs.base import BaseFetcher, INotified
 from jobs.defipulse_job import DefiPulseKeeper
 from lib.datetime import parse_timespan_to_seconds, now_ts, HOUR, MINUTE, DAY
 from lib.depcont import DepContainer
+from lib.texts import MessageType
+from lib.utils import circular_shuffled_iterator
 from localization import LocalizationManager
 from models.models import CoinPriceInfo, PriceReport, PriceHistoricalTriplet, DefiPulseEntry, PriceATH
 
@@ -79,6 +80,8 @@ class PriceHandler(INotified):
 
     def __init__(self, deps: DepContainer):
         self.deps = deps
+        self.stickers = deps.cfg.notifications.price.ath.stickers
+        self.ath_sticker_iter = circular_shuffled_iterator(self.stickers)
 
     async def get_prev_ath(self) -> PriceATH:
         try:
@@ -100,24 +103,35 @@ class PriceHandler(INotified):
             await self.deps.db.get_redis()
             await self.deps.db.redis.set(self.KEY_ATH, PriceATH(
                 int(now_ts()), price
-            ))
+            ).to_json())
             return True
         return False
 
+    async def send_ath_sticker(self):
+        if self.ath_sticker_iter:
+            sticker = next(self.ath_sticker_iter)
+            user_lang_map = self.deps.broadcaster.telegram_chats_from_config(self.deps.loc_man)
+            await self.deps.broadcaster.broadcast(user_lang_map.keys(), sticker, message_type=MessageType.STICKER)
+
     async def send_notification(self, p: PriceReport):
         loc_man: LocalizationManager = self.deps.loc_man
+        text = loc_man.default.notification_text_price_update(p)
+        user_lang_map = self.deps.broadcaster.telegram_chats_from_config(self.deps.loc_man)
+        await self.deps.broadcaster.broadcast(user_lang_map.keys(), text)
+        if p.is_ath:
+            await self.send_ath_sticker()
+
+    async def on_data(self, sender, p: PriceReport):
         d: DefiPulseKeeper = self.deps.defipulse
 
-        defipulse_all = await d.get_last_state()
-        p.defipulse = d.find_alpha(defipulse_all)
+        # p.price_and_cap.usd = 2.98  # todo: for ATH debugging
+
+        p.defipulse = await d.get_last_state()
         p.price_ath = await self.get_prev_ath()
-        p.is_ath = False
+        p.is_ath = (await self.update_ath(p.price_and_cap.usd))
 
-        text = loc_man.default.notification_text_price_update(p)
+        # send if
+        #  1. ATH
+        #  2. time has come for daily message
 
-        user_lang_map = self.deps.broadcaster.telegram_chats_from_config(self.deps.loc_man)
-
-        await self.deps.broadcaster.broadcast(user_lang_map.keys(), text)
-
-    async def on_data(self, sender, data: PriceReport):
-        await self.send_notification(data)
+        await self.send_notification(p)

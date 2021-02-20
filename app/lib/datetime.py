@@ -1,4 +1,5 @@
 from datetime import datetime, time
+import time as time_module
 
 MINUTE = 60
 HOUR = 60 * 60
@@ -106,3 +107,15 @@ def delay_to_next_hour_minute(hour, minute, second=0, now=None):
     now = now or datetime.now()
     that_time = datetime.now().replace(hour=hour, minute=minute, second=second, microsecond=0)
     return (now - that_time).seconds
+
+
+def parse_time(time_str):
+    r = time_module.strptime(time_str, "%H:%M")
+    return r.tm_hour, r.tm_min
+
+
+def is_time_to_do(h, m):
+    due_dt = datetime.now().replace(hour=h, minute=m, second=0, microsecond=0)
+    now = datetime.now()
+    sec_to_next_daily_event = (due_dt - now).total_seconds()
+    return sec_to_next_daily_event < 0

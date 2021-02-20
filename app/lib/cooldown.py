@@ -1,5 +1,6 @@
 import json
 from dataclasses import dataclass
+from datetime import datetime
 from time import time
 
 from lib.db import DB
@@ -79,3 +80,46 @@ class Cooldown:
 
     async def clear(self, event_name):
         await self.write(event_name, cd=CooldownRecord(0, 0))
+
+
+class OnceADay:
+    def __init__(self, db: DB, event_name):
+        self.db = db
+        self.event_name = event_name
+
+    @staticmethod
+    def get_key(name):
+        return f"once-a-day:{name}"
+
+    async def read(self):
+        r = await self.db.get_redis()
+        return await r.get(self.get_key(self.event_name))
+
+    @staticmethod
+    def format_date(d: datetime):
+        return d.strftime('%Y-%m-%d')
+
+    async def write_today(self):
+        today_str = self.format_date(datetime.today())
+        r = await self.db.get_redis()
+        await r.set(self.get_key(self.event_name), today_str)
+
+    async def can_do(self):
+        save_day_u: bytes = await self.read()
+        today_u: bytes = self.format_date(datetime.today()).encode('utf-8')
+        if save_day_u == today_u:
+            return False
+        return True
+
+    async def clear(self):
+        r = await self.db.get_redis()
+        await r.delete(self.get_key(self.event_name))
+
+    async def check_time(self, h, m):
+        due_dt = datetime.now().replace(hour=h, minute=m, second=0, microsecond=0)
+        now = datetime.now()
+        sec_to_next_daily_event = (due_dt - now).total_seconds()
+        if sec_to_next_daily_event < 0:
+            if await self.can_do():
+                await self.send_notification(p)
+                await self.daily_once.write_today()

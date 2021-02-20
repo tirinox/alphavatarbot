@@ -1,10 +1,13 @@
 import asyncio
+import datetime
 from collections import namedtuple
 from typing import List
 
 from jobs.base import BaseFetcher, INotified
 from jobs.defipulse_job import DefiPulseKeeper
-from lib.datetime import parse_timespan_to_seconds, now_ts, HOUR, MINUTE, DAY
+from lib.cooldown import Cooldown, OnceADay
+from lib.datetime import parse_timespan_to_seconds, now_ts, HOUR, MINUTE, DAY, delay_to_next_hour_minute, parse_time, \
+    is_time_to_do
 from lib.depcont import DepContainer
 from lib.texts import MessageType
 from lib.utils import circular_shuffled_iterator
@@ -80,8 +83,10 @@ class PriceHandler(INotified):
 
     def __init__(self, deps: DepContainer):
         self.deps = deps
-        self.stickers = deps.cfg.notifications.price.ath.stickers
+        self.cfg = deps.cfg.notifications.price
+        self.stickers = self.cfg.ath.stickers
         self.ath_sticker_iter = circular_shuffled_iterator(self.stickers)
+        self.daily_once = OnceADay(self.deps.db, 'PriceDaily')
 
     async def get_prev_ath(self) -> PriceATH:
         try:
@@ -121,6 +126,10 @@ class PriceHandler(INotified):
         if p.is_ath:
             await self.send_ath_sticker()
 
+    def _is_it_time_for_daily_message(self):
+        h, m = parse_time(self.cfg.time_of_day)
+        return is_time_to_do(h, m)
+
     async def on_data(self, sender, p: PriceReport):
         d: DefiPulseKeeper = self.deps.defipulse
 
@@ -130,8 +139,9 @@ class PriceHandler(INotified):
         p.price_ath = await self.get_prev_ath()
         p.is_ath = (await self.update_ath(p.price_and_cap.usd))
 
-        # send if
-        #  1. ATH
-        #  2. time has come for daily message
-
-        await self.send_notification(p)
+        if p.is_ath:
+            await self.send_notification(p)
+        elif self._is_it_time_for_daily_message():
+            if await self.daily_once.can_do():
+                await self.send_notification(p)
+                await self.daily_once.write_today()

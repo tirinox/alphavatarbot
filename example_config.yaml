@@ -24,8 +24,9 @@ data_source:
 
 notifications:
   price:
-    global_cd: 12h
+    global_cd: 24h
     change_cd: 1h
+    time_of_day: "12:00"
     ath:
       cooldown: 2m
       stickers:

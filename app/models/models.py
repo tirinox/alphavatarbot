@@ -12,6 +12,9 @@ class DefiPulseEntry:
     name: str = 'no_name'
     tlv_usd: float = 0.0
     tlv_usd_relative_1d: float = 0.0
+    tlv_is_ath: bool = False
+
+    rank_delta: int = 0
 
     @classmethod
     def parse(cls, j):
@@ -45,6 +48,7 @@ REAL_REGISTERED_ATH = 2.93
 REAL_REGISTERED_ATH_DATE = 1612367085
 
 
+@dataclass_json
 @dataclass
 class PriceATH:
     ath_date: int = REAL_REGISTERED_ATH_DATE

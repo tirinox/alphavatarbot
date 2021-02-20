@@ -1,4 +1,4 @@
-from jobs.defipulse_job import DefiPulseFetcher, DefiPulsePersistance
+from jobs.defipulse_job import DefiPulseFetcher, DefiPulseKeeper
 from main import App
 
 IS_LOAD_SCENARIO = True
@@ -12,14 +12,14 @@ class TestApp(App):
             await self._save_scenario()
 
     async def _load_scenario(self):
-        defipulse_saver = DefiPulsePersistance(self.deps)
+        defipulse_saver = DefiPulseKeeper(self.deps)
         items = await defipulse_saver.get_last_state()
-        alpha = DefiPulseFetcher.find_alpha(items)
+        alpha = DefiPulseKeeper.find_alpha(items)
         print(alpha)
 
     async def _save_scenario(self):
         fetcher_defipulse = DefiPulseFetcher(self.deps)
-        defipulse_saver = DefiPulsePersistance(self.deps)
+        defipulse_saver = DefiPulseKeeper(self.deps)
         fetcher_defipulse.subscribe(defipulse_saver)
         await fetcher_defipulse.run()
         await self.deps.dp.stop_polling()

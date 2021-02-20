@@ -31,12 +31,8 @@ class DefiPulseFetcher(BaseFetcher):
     def parse_defipulse(response):
         return [DefiPulseEntry.parse(item) for item in response]
 
-    @staticmethod
-    def find_alpha(items: List[DefiPulseEntry]):
-        return next((item for item in items if item.name == DefiPulseFetcher.ALPHA_NAME), None)
 
-
-class DefiPulsePersistance(INotified):
+class DefiPulseKeeper(INotified):
     KEY = 'defipulse:last'
 
     def __init__(self, deps: DepContainer):
@@ -53,3 +49,6 @@ class DefiPulsePersistance(INotified):
         items = DefiPulseEntry.schema().loads(data, many=True)
         return items
 
+    @staticmethod
+    def find_alpha(items: List[DefiPulseEntry]):
+        return next((item for item in items if item.name == DefiPulseFetcher.ALPHA_NAME), None)

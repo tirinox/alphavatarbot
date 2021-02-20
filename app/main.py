@@ -5,7 +5,7 @@ import aiohttp
 from aiogram import Bot, Dispatcher, executor
 from aiogram.types import *
 
-from jobs.defipulse_job import DefiPulseFetcher, DefiPulsePersistance
+from jobs.defipulse_job import DefiPulseFetcher, DefiPulseKeeper
 from jobs.price_job import PriceFetcher, PriceHandler
 from lib.broadcast import Broadcaster
 from localization import LocalizationManager
@@ -48,16 +48,16 @@ class App:
             self.deps.dp.storage = await self.deps.db.get_storage()
 
     async def _run_background_jobs(self):
-        fetcher_defipulse = DefiPulseFetcher(self.deps)
-        defipulse_saver = DefiPulsePersistance(self.deps)
-        fetcher_defipulse.subscribe(defipulse_saver)
+        defipulse_fetcher = DefiPulseFetcher(self.deps)
+        self.deps.defipulse = defipulse_saver = DefiPulseKeeper(self.deps)
+        defipulse_fetcher.subscribe(defipulse_saver)
 
         price_fetcher = PriceFetcher(self.deps)
         price_handler = PriceHandler(self.deps)
         price_fetcher.subscribe(price_handler)
 
         await asyncio.gather(*(task.run() for task in [
-            fetcher_defipulse,
+            # defipulse_fetcher,   # fixme: not to spend credits
             price_fetcher
         ]))
 

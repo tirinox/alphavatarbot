@@ -77,15 +77,19 @@ class BaseLocalization(ABC):  # == English
                 message += pre(f"{title.rjust(4)}:{adaptive_round_to_str(pc, True).rjust(8)} % "
                                f"{emoji_for_percent_change(pc).ljust(4).rjust(6)}") + "\n"
 
-        # TODO: TLV and defipulse rank (+ TLV ATH)
-
         if p.price_and_cap.rank >= 1:
+            ath_tlv_text = ''
+            if p.defipulse.tlv_is_ath:
+                ath_tlv_text = 'ATH!'
+
+            rank_delta_text = ''
+            if p.defipulse.rank_delta != 0:
+                arrow = '↓' if p.defipulse.rank_delta < 0 else '↑'
+                rank_delta_text = f'{arrow} {abs(p.defipulse.rank_delta)}'
+
             message += (f"TVL of Alpha Homora v1 & v2: {code(pretty_dollar(p.defipulse.tlv_usd))}"
-                        f" ({adaptive_round_to_str(p.defipulse.tlv_usd_relative_1d, force_sign=True)} %)\n"
-                        f"DeFi Pulse rank: #{bold(p.defipulse.rank)}\n")
-        #
-        # if fp.tlv_usd >= 1:
-        #     message += (f"TVL of non-RUNE assets: ${pre(pretty_money(fp.tlv_usd))}\n"
-        #                 f"So of RUNE is {code(pretty_money(fp.fair_price, prefix='$'))}")
-        #
+                        f" ({adaptive_round_to_str(p.defipulse.tlv_usd_relative_1d, force_sign=True)} %) "
+                        f"{ath_tlv_text}\n"
+                        f"DeFi Pulse rank: #{bold(p.defipulse.rank)} {rank_delta_text}\n")
+
         return message.rstrip()

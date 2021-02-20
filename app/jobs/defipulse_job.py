@@ -1,6 +1,8 @@
+import logging
 from typing import List
 
 import aioredis
+import typing
 
 from jobs.base import BaseFetcher, INotified
 from lib.datetime import parse_timespan_to_seconds
@@ -33,21 +35,37 @@ class DefiPulseFetcher(BaseFetcher):
 
 
 class DefiPulseKeeper(INotified):
-    KEY = 'defipulse:last'
+    KEY_DEFIPULSE = 'defipulse:alpha:last'
+    KEY_TLV_ATH_USD = 'defipulse:alpha:tlv_ath_usd'
 
     def __init__(self, deps: DepContainer):
         self.deps = deps
+        self.logger = logging.getLogger(self.__class__.__name__)
 
-    async def on_data(self, sender, data):
-        data_to_save = DefiPulseEntry.schema().dumps(data, many=True)
-        r: aioredis.Redis = await self.deps.db.get_redis()
-        await r.set(self.KEY, data_to_save)
+    async def on_data(self, sender, data: List[DefiPulseEntry]):
+        alpha: DefiPulseEntry = self.find_alpha(data)
+        if not alpha:
+            self.logger.error('no alpha found!')
+            return
 
-    async def get_last_state(self):
+        prev_alpha: DefiPulseEntry = await self.get_last_state()
+        if prev_alpha:
+            alpha.rank_delta = alpha.rank - prev_alpha.rank
+
         r: aioredis.Redis = await self.deps.db.get_redis()
-        data = await r.get(self.KEY)
-        items = DefiPulseEntry.schema().loads(data, many=True)
-        return items
+
+        prev_tlv_ath = float((await r.get(self.KEY_TLV_ATH_USD)) or 0.0)
+        if alpha.tlv_usd > prev_tlv_ath:
+            await r.set(self.KEY_TLV_ATH_USD, alpha.tlv_usd)
+            self.logger.info(f'updated TLV ATH ${prev_tlv_ath} -> ${alpha.tlv_usd}')
+            alpha.tlv_is_ath = True
+
+        await r.set(self.KEY_DEFIPULSE, alpha.to_json())
+
+    async def get_last_state(self) -> typing.Optional[DefiPulseEntry]:
+        r: aioredis.Redis = await self.deps.db.get_redis()
+        data = await r.get(self.KEY_DEFIPULSE)
+        return DefiPulseEntry.from_json(data) if data else None
 
     @staticmethod
     def find_alpha(items: List[DefiPulseEntry]):

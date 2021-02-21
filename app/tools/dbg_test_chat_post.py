@@ -35,6 +35,7 @@ class TestApp(App):
 
     async def _run_background_jobs(self):
         # await self._test_all_stickers()
+        await self._test_send_message()
         exit(0)
 
 

@@ -88,8 +88,11 @@ class BaseLocalization(ABC):  # == English
                 rank_delta_text = f'{arrow} {abs(p.defipulse.rank_delta)}'
 
             tlv_change_text = adaptive_round_to_str(p.defipulse.tlv_usd_relative_1d, force_sign=True)
-            message += (f"TVL of Alpha Homora v1 & v2: {code(pretty_dollar(p.defipulse.tlv_usd))}"
-                        f" ({tlv_change_text} %) {ath_tlv_text}\n"
-                        f"DeFi Pulse rank: #{bold(p.defipulse.rank)} {rank_delta_text}\n")
+            message += (
+                f"Coin market cap is {bold(pretty_dollar(p.price_and_cap.usd_market_cap))} (#{p.price_and_cap.rank}).\n"
+                f"TVL of Alpha Homora v1 & v2: {code(pretty_dollar(p.defipulse.tlv_usd))}"
+                f" ({tlv_change_text} %) {ath_tlv_text}\n"
+                f"DeFi Pulse rank: #{bold(p.defipulse.rank)} {rank_delta_text}\n"
+            )
 
         return message.rstrip()

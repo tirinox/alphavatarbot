@@ -1,12 +1,11 @@
 import asyncio
-import datetime
 from collections import namedtuple
 from typing import List
 
 from jobs.base import BaseFetcher, INotified
 from jobs.defipulse_job import DefiPulseKeeper
-from lib.cooldown import Cooldown, OnceADay
-from lib.datetime import parse_timespan_to_seconds, now_ts, HOUR, MINUTE, DAY, delay_to_next_hour_minute, parse_time, \
+from lib.cooldown import OnceADay
+from lib.datetime import parse_timespan_to_seconds, now_ts, HOUR, MINUTE, DAY, parse_time, \
     is_time_to_do
 from lib.depcont import DepContainer
 from lib.texts import MessageType
@@ -133,7 +132,7 @@ class PriceHandler(INotified):
     async def on_data(self, sender, p: PriceReport):
         d: DefiPulseKeeper = self.deps.defipulse
 
-        # p.price_and_cap.usd = 2.98  # todo: for ATH debugging
+        # p.price_and_cap.usd = 3.01  # todo: for ATH debugging
 
         p.defipulse = await d.get_last_state()
         p.price_ath = await self.get_prev_ath()

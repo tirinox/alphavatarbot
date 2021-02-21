@@ -16,11 +16,15 @@ services:
     volumes:
       - ./app:/app
       - ./config.yaml:/config/config.yaml
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
 
   redis:
     image: "redis:alpine"
     volumes:
       - ./redis_data:/data
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
     networks:
       - redis-net
     restart: always

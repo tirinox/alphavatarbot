@@ -57,7 +57,7 @@ class App:
         price_fetcher.subscribe(price_handler)
 
         await asyncio.gather(*(task.run() for task in [
-            # defipulse_fetcher,   # fixme: not to spend credits
+            defipulse_fetcher,   # fixme: not to spend credits
             price_fetcher
         ]))
 

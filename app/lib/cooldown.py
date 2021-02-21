@@ -114,12 +114,3 @@ class OnceADay:
     async def clear(self):
         r = await self.db.get_redis()
         await r.delete(self.get_key(self.event_name))
-
-    async def check_time(self, h, m):
-        due_dt = datetime.now().replace(hour=h, minute=m, second=0, microsecond=0)
-        now = datetime.now()
-        sec_to_next_daily_event = (due_dt - now).total_seconds()
-        if sec_to_next_daily_event < 0:
-            if await self.can_do():
-                await self.send_notification(p)
-                await self.daily_once.write_today()

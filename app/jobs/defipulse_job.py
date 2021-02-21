@@ -74,4 +74,9 @@ class DefiPulseKeeper(INotified):
 
     @staticmethod
     def find_alpha(items: List[DefiPulseEntry]):
-        return next((item for item in items if item.name == DefiPulseFetcher.ALPHA_NAME), None)
+        ranked_items = ((rank, item) for rank, item in enumerate(items, start=1))
+        result = next(((rank, item) for rank, item in ranked_items if item.name == DefiPulseFetcher.ALPHA_NAME), None)
+        if result:
+            rank, item = result
+            item.rank = rank
+            return item

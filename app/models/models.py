@@ -14,6 +14,7 @@ class DefiPulseEntry:
     tlv_usd_relative_1d: float = 0.0
     tlv_is_ath: bool = False
 
+    rank: int = 0
     rank_delta: int = 0
 
     @classmethod
@@ -27,10 +28,6 @@ class DefiPulseEntry:
             tlv_usd=float(tlv_usd.get('value', 0.0)),
             tlv_usd_relative_1d=float(tlv_usd.get('relative_1d', 0.0))
         )
-
-    @property
-    def rank(self):
-        return self.id + 1
 
 
 @dataclass

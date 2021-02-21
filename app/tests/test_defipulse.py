@@ -3,7 +3,7 @@ import os
 
 import pytest
 
-from jobs.defipulse_job import DefiPulseFetcher
+from jobs.defipulse_job import DefiPulseFetcher, DefiPulseKeeper
 
 
 @pytest.fixture
@@ -14,7 +14,7 @@ def defipulse_example_json():
 
 
 def test_parsedefi_pulse(defipulse_example_json):
-    alpha_defi = DefiPulseFetcher.find_alpha(DefiPulseFetcher.parse_defipulse(defipulse_example_json))
+    alpha_defi = DefiPulseKeeper.find_alpha(DefiPulseFetcher.parse_defipulse(defipulse_example_json))
     assert alpha_defi.id == 49
     assert alpha_defi.name == DefiPulseFetcher.ALPHA_NAME
     assert alpha_defi.tlv_usd == 1023102498.0

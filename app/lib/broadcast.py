@@ -114,6 +114,8 @@ class Broadcaster:
             count = 0
             bad_ones = []
 
+            self.logger.info(f'Broadcast {message!r} to {list(chat_ids)!r}')
+
             try:
                 chat_ids = self.sort_and_shuffle_chats(chat_ids)
 

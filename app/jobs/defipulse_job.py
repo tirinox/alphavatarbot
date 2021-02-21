@@ -27,6 +27,7 @@ class DefiPulseFetcher(BaseFetcher):
         url = self.URL_DEFI_PULSE_PROJECTS.format(api_key=self._defipulse_api_key)
         async with self.deps.session.get(url) as reps:
             response_j = await reps.json()
+            self.logger.info(f'got fresh defipulse data ({len(response_j)} items)')
             return self.parse_defipulse(response_j)
 
     @staticmethod
@@ -48,9 +49,13 @@ class DefiPulseKeeper(INotified):
             self.logger.error('no alpha found!')
             return
 
+        self.logger.info(f'defipulse of Alpha: {alpha}')
+
         prev_alpha: DefiPulseEntry = await self.get_last_state()
         if prev_alpha:
             alpha.rank_delta = alpha.rank - prev_alpha.rank
+            if alpha.rank_delta != 0:
+                self.logger.info(f'updated Defipulse rank #{prev_alpha.rank} -> #{alpha.rank}')
 
         r: aioredis.Redis = await self.deps.db.get_redis()
 

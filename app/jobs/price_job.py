@@ -33,7 +33,10 @@ class PriceFetcher(BaseFetcher):
         super().__init__(deps, parse_timespan_to_seconds(cfg.fetch_period))
 
     async def fetch(self) -> PriceReport:
+        self.logger.info('start job')
+
         now = now_ts()
+
         rank, price_data, p_1h, p_24h, p_7d = await asyncio.gather(
             self._fetch_rank(),
             self._fetch_price(),
@@ -61,19 +64,23 @@ class PriceFetcher(BaseFetcher):
         async with self.deps.session.get(url) as reps:
             response_j = await reps.json()
             result = CoinPriceInfo(**response_j.get(self.ALPHA_GECKO_NAME, {}))
+            self.logger.info(f'got gecko current price {self.ALPHA_GECKO_NAME!r}: {result}')
             return result
 
     async def _fetch_rank(self) -> int:
         url = self.COIN_RANK_GECKO.format(coin=self.ALPHA_GECKO_NAME)
         async with self.deps.session.get(url) as reps:
             response_j = await reps.json()
-            return int(response_j.get('market_cap_rank', 0))
+            rank = int(response_j.get('market_cap_rank', 0))
+            self.logger.info(f'got gecko rank {self.ALPHA_GECKO_NAME!r} -> #{rank}')
+            return rank
 
     async def _fetch_price_history(self, t_from, t_to) -> List[PriceAndDate]:
         url = self.COIN_PRICE_HISTORY_GECKO.format(coin=self.ALPHA_GECKO_NAME, t_from=t_from, t_to=t_to)
         async with self.deps.session.get(url) as reps:
             response_j = await reps.json()
             prices = response_j.get('prices', [])
+            self.logger.info(f'got gecko price range {self.ALPHA_GECKO_NAME!r} from {t_from} to {t_to}')
             return [PriceAndDate(*p) for p in prices]
 
 

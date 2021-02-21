@@ -53,6 +53,7 @@ class App:
         defipulse_fetcher.subscribe(defipulse_saver)
 
         price_fetcher = PriceFetcher(self.deps)
+        price_fetcher.startup_sleep = 3.0
         price_handler = PriceHandler(self.deps)
         price_fetcher.subscribe(price_handler)
 

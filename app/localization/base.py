@@ -78,21 +78,24 @@ class BaseLocalization(ABC):  # == English
                                f"{emoji_for_percent_change(pc).ljust(4).rjust(6)}") + "\n"
 
         if p.price_and_cap.rank >= 1:
-            ath_tlv_text = ''
-            if p.defipulse.tlv_is_ath:
-                ath_tlv_text = '🚀 ATH!'
-
-            rank_delta_text = ''
-            if p.defipulse.rank_delta != 0:
-                arrow = '😃 ↑' if p.defipulse.rank_delta < 0 else '🙁 ↓'  # up if rank is less then prev
-                rank_delta_text = f'{arrow} {abs(p.defipulse.rank_delta)}'
-
-            tlv_change_text = adaptive_round_to_str(p.defipulse.tlv_usd_relative_1d, force_sign=True)
             message += (
                 f"Coin market cap is {bold(pretty_dollar(p.price_and_cap.usd_market_cap))} (#{p.price_and_cap.rank}).\n"
-                f"TVL of Alpha Homora v1 & v2: {code(pretty_dollar(p.defipulse.tlv_usd))}"
-                f" ({tlv_change_text} %) {ath_tlv_text}\n"
-                f"DeFi Pulse rank: #{bold(p.defipulse.rank)} {rank_delta_text}\n"
             )
+
+        ath_tlv_text = ''
+        if p.defipulse.tlv_is_ath:
+            ath_tlv_text = '🚀 ATH!'
+
+        rank_delta_text = ''
+        if p.defipulse.rank_delta != 0:
+            arrow = '😃 ↑' if p.defipulse.rank_delta < 0 else '🙁 ↓'  # up if rank is less then prev
+            rank_delta_text = f'{arrow} {abs(p.defipulse.rank_delta)}'
+
+        tlv_change_text = adaptive_round_to_str(p.defipulse.tlv_usd_relative_1d, force_sign=True)
+        message += (
+            f"TVL of Alpha Homora v1 & v2: {code(pretty_dollar(p.defipulse.tlv_usd))}"
+            f" ({tlv_change_text} %) {ath_tlv_text}\n"
+            f"DeFi Pulse rank: #{bold(p.defipulse.rank)} {rank_delta_text}\n"
+        )
 
         return message.rstrip()

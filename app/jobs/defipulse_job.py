@@ -56,6 +56,8 @@ class DefiPulseKeeper(INotified):
             alpha.rank_delta = alpha.rank - prev_alpha.rank
             if alpha.rank_delta != 0:
                 self.logger.info(f'updated Defipulse rank #{prev_alpha.rank} -> #{alpha.rank}')
+        else:
+            alpha.rank_delta = 0
 
         r: aioredis.Redis = await self.deps.db.get_redis()
 

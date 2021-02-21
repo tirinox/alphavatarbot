@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from datetime import datetime
 
 from dataclasses_json import dataclass_json
 
@@ -14,6 +15,8 @@ class DefiPulseEntry:
     tlv_usd_relative_1d: float = 0.0
     tlv_is_ath: bool = False
 
+    timestamp: int = 0
+
     rank: int = 0
     rank_delta: int = 0
 
@@ -26,7 +29,8 @@ class DefiPulseEntry:
             id=int(j.get('id', 0)),
             name=j.get('name', ''),
             tlv_usd=float(tlv_usd.get('value', 0.0)),
-            tlv_usd_relative_1d=float(tlv_usd.get('relative_1d', 0.0))
+            tlv_usd_relative_1d=float(tlv_usd.get('relative_1d', 0.0)),
+            timestamp=int(datetime.now().timestamp())
         )
 
 

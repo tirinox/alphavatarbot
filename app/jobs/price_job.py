@@ -4,7 +4,7 @@ from typing import List
 
 from jobs.base import BaseFetcher, INotified
 from jobs.defipulse_job import DefiPulseKeeper
-from lib.cooldown import OnceADay
+from lib.cooldown import OnceADay, Cooldown
 from lib.datetime import parse_timespan_to_seconds, now_ts, HOUR, MINUTE, DAY, parse_time, \
     is_time_to_do
 from lib.depcont import DepContainer
@@ -91,8 +91,10 @@ class PriceHandler(INotified):
         self.deps = deps
         self.cfg = deps.cfg.notifications.price
         self.stickers = self.cfg.ath.stickers
+        self.notification_period = parse_timespan_to_seconds(self.cfg.period)
         self.ath_sticker_iter = circular_shuffled_iterator(self.stickers)
         self.daily_once = OnceADay(self.deps.db, 'PriceDaily')
+        self.regular_price_cd = Cooldown(self.deps.db, 'regular_price_notification', self.notification_period)
 
     async def get_prev_ath(self) -> PriceATH:
         try:
@@ -132,7 +134,7 @@ class PriceHandler(INotified):
         if p.is_ath:
             await self.send_ath_sticker()
 
-    def _is_it_time_for_daily_message(self):
+    def _is_it_time_for_regular_message(self):
         h, m = parse_time(self.cfg.time_of_day)
         return is_time_to_do(h, m)
 
@@ -147,7 +149,10 @@ class PriceHandler(INotified):
 
         if p.is_ath:
             await self.send_notification(p)
-        elif self._is_it_time_for_daily_message():
-            if await self.daily_once.can_do():
+        elif self._is_it_time_for_regular_message():
+            if await self.regular_price_cd.can_do():
                 await self.send_notification(p)
-                await self.daily_once.write_today()
+                await self.regular_price_cd.do()
+            # if await self.daily_once.can_do():
+            #     await self.send_notification(p)
+            #     await self.daily_once.write_today()

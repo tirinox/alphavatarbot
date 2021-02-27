@@ -24,7 +24,8 @@ data_source:
 
 notifications:
   price:
-    time_of_day: "12:00"
+#    time_of_day: "12:00"
+    period: 12h  # twice a day
     ath:
       stickers:
         - CAACAgIAAxkBAAIPuF-zvf5B1guBsIC8YqQE7jHnNP39AAJkBQACP5XMCgTLN7BUdOcAAR4E

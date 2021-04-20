@@ -13,6 +13,9 @@ from lib.depcont import DepContainer
 from lib.texts import kbd
 
 
+# todo: accept documents!
+
+
 class AvatarStates(StatesGroup):
     mode = HelperMode.snake_case  # fixme: no state handle
     MAIN = State()
